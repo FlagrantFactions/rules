@@ -1,0 +1,65 @@
+@import "bootstrap/bootstrap";
+
+article#content {
+  display: flex;
+  margin-top: 1em;
+  nav#TableOfContents {
+    min-width: 250px;
+    max-width: 250px;
+    z-index: 999;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    ul {
+      @extend .nav;
+      @extend .flex-column;
+      @extend .overflow-auto;
+      li {
+        @extend .nav-item;
+        ul {
+          padding-left: 1em;
+        }
+      }
+      a {
+        @extend .nav-link;
+      }
+    }
+  }
+  section#main {
+    margin-left: 275px;
+    width: 80%;
+  }
+}
+
+table {
+  @extend .table;
+  @extend .table-striped;
+}
+
+details.scenario {
+  padding: 0.5em;
+  margin: 0.5em;
+  max-width: 75%;
+
+  &.odd {
+    @extend .bg-primary;
+    @extend .text-light;
+  }
+
+  summary {
+    cursor: pointer;
+    * {
+      display: inline;
+      padding-left: 0.5em;
+    }
+  }
+  div.scenario_contents {
+    padding: 0.5em;
+  }
+  h3 {
+    text-align: center;
+  }
+  p {
+    padding-left: 0.5em;
+  }
+}

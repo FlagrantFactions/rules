@@ -1,0 +1,16 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" aria-labelledby="sitenav" id="sitenav">
+  <div class="container-fluid">
+  </div>
+  {{ $currentPage := . }}
+  <a href="/" class="navbar-brand">Flagrant Factions</a>
+  {{ range .Site.Menus.main }}
+  {{ $activePage := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+  <a href="{{ .URL }}" data-fuck="{{ $activePage }}"
+     class="nav-link{{if eq "true" $activePage }} active{{end}}"
+     {{if eq "true" $activePage }}aria-current="page"{{end}}
+     title="{{ .Title }}"
+  >
+    {{ .Name }}
+  </a>
+  {{ end }}
+</nav>

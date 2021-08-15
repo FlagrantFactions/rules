@@ -1,0 +1,2 @@
+# github.com/gohugoio/hugo-mod-bootstrap-scss-v5 v1.0.0
+# github.com/twbs/bootstrap v5.0.2+incompatible

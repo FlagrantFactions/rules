@@ -1,0 +1,39 @@
+baseURL: http://example.org/
+languageCode: en-us
+title: Flagrant Factions
+theme: ff
+sectionPagesMenu: main
+markup:
+  tableOfContents:
+    endLevel: 4
+    ordered: false
+    startLevel: 2
+  goldmark:
+    parser:
+      attribute:
+        block: true
+params:
+  language: en
+
+menu:
+  main:
+    - identifier: rules
+      name: Rules
+      title: Rules for play
+      url: /rules/
+      weight: -150
+    - identifier: scenarios
+      name: Scenarios
+      title: Scenario list
+      url: /scenarios/
+      weight: -140
+    - identifier: spells
+      name: Spells
+      title: Spell list
+      url: /spells/
+      weight: -130
+    - identifier: companies
+      name: Companies
+      title: Sample companies
+      url: /companies/
+      weight: -120
